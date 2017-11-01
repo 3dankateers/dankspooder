@@ -26,7 +26,10 @@ conn.commit()
 #Hardcode tournament names for now
 tournamentNames = []
 tournamentNames.append("league-of-legends-world-championship")
-
+tournamentNames.append("dota-2-dotapit-league")
+tournamentNames.append("csgo-esports-championship-series-eu")
+tournamentNames.append("starcraft-broodwar-afreeca-starleague")
+tournamentNames.append("overwatch-overwatch-world-cup")
 
 '''
 Team1, Team2 = ""
@@ -75,9 +78,9 @@ time.sleep(2)
 password = driver.find_element_by_id("modal-account-login-password-textbox").send_keys(PASSWORD)
 time.sleep(2)
 submitLogin = driver.find_element_by_id("modal-account-login-button").click()
-time.sleep(2)
 
 for rows in range (len(tournamentNames)):
+	time.sleep(2)
 	driver.get("https://nitrogensports.eu/sport/esports/"+str(tournamentNames[rows]))
 	time.sleep(2)
 	events = driver.find_elements_by_class_name('event')
@@ -124,8 +127,12 @@ for rows in range (len(tournamentNames)):
 					#IDK why but sometimes the numbers in brackets arent on the website, not even selinium's fault because I cant see them either
 					MLNum1 = "Error"
 					MLNum2 = "Error"
+					#This makes sure u always get at least one of the ML odds, not sure if I should just put it in another column
+					#MLNum1 = lines[Odds1Line+skip*offset][3:]
+					#MLNum2 = lines[Odds2Line+skip*offset][3:]
 
 				PulledTime = datetime.now()
 
 				c.execute("INSERT INTO BetInfo VALUES (?,?,?,?,?,?,?,?,datetime('now','localtime'));", (Team1, Team2, BTC1, BTC2, MLNum1, MLNum2, mapNumber,TournamentDate))
 				conn.commit()
+
