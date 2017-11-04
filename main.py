@@ -20,7 +20,7 @@ PASSWORD = "0m3g4lul"
 
 conn = sqlite3.connect('data/Betting.sqlite')
 c = conn.cursor()
-c.execute("CREATE TABLE IF NOT EXISTS NitrogenData (Team1, Team2, BTC1, BTC2, MLNum1, MLNum2, TypeOfBet,TournamentDate, datePulled);")
+c.execute("CREATE TABLE IF NOT EXISTS NitrogenDatabase (team1, team2, btc1, btc2, moneyLine1, moneyLine2, typeOfBet,tournamentDate, datePulled);")
 conn.commit()
 
 #Hardcode tournament names for now
@@ -35,25 +35,25 @@ REFRESH_DELAY = 60
 stillRunning = True
 
 '''
-Team1, Team2 = ""
-BTC1, BTC2, MLStd1, MLStd2 = 0
-TournamentDate, PulledTime = None
+team1, team2 = ""
+btc1, btc2, moneyLine1, moneyLine2 = 0
+tournamentDate, PulledTime = None
 '''
 '''
 Team names 1 and 2
 BTC are the BTC values to the right, idk what they are there for
 MLNum is the x.xxx format ML odds
 MLStd is (+/-)xxx format ML odds
-TournamentDate is when the tournament is set to happen
+tournamentDate is when the tournament is set to happen
 PulledTime is when data was pulled using this program
 '''
-Team1 = ""
-Team2 = ""
-BTC1 = 0
-BTC2 = 0
-MLStd1 = 0
-MLStd2 = 0
-mapNumber = 0
+team1 = ""
+team2 = ""
+btc1 = 0
+btc2 = 0
+moneyLine1 = 0
+moneyLine2 = 0
+typeOfBet = 0
 
 
 #assuming this is how many data lines there are per row (teams + bets etc)
@@ -61,11 +61,11 @@ offset = 6
 #Each line corresponds to a certain piece of data
 dateLine = 1
 team1Line = 2
-BTC1Line = 3
-Odds1Line = 4
+btc1Line = 3
+odds1Line = 4
 team2Line = 5
-BTC2Line = 6
-Odds2Line = 7
+btc2Line = 6
+odds2Line = 7
 
 
 
@@ -101,12 +101,12 @@ while (stillRunning):
 			#WEW LADS
 			#GL reading this bois
 			if(len(lines)>=7):
-				TournamentDate = datetime.strptime(lines[dateLine], '%A, %B %d, %Y %I:%M%p')
+				tournamentDate = datetime.strptime(lines[dateLine], '%A, %B %d, %Y %I:%M%p')
 
 				for skip in range(((len(lines)-2)/6)):
 					#Temp Variable
 					tempo = lines[team1Line+skip*offset].split('(')
-					Team1 = tempo[0]
+					team1 = tempo[0]
 
 					try:
 						array = lines[team1Line+skip*offset].split(')')
@@ -122,32 +122,32 @@ while (stillRunning):
 
 						if (answers == ""):
 							answers = "Match,"
-						mapNumber = answers
+						typeOfBet = answers
 
 					except:
-						mapNumber = -1#-1 if something went wong
+						typeOfBet = -1#-1 if something went wong
 
 					tempo = lines[team2Line+skip*offset].split('(')
-					Team2 = tempo[0]
-					BTC1 = lines[BTC1Line+skip*offset][:-4]
-					BTC2 = lines[BTC2Line+skip*offset][:-4]
-					#MLNum1 = lines[4][10:-1]
-					#MLNum2 = lines[7][10:-1]
+					team2 = tempo[0]
+					btc1 = lines[btc1Line+skip*offset][:-4]
+					btc2 = lines[btc2Line+skip*offset][:-4]
+					#moneyLine1 = lines[4][10:-1]
+					#moneyLine2 = lines[7][10:-1]
 					
 					try:
-						MLNum1 = lines[Odds1Line+skip*offset][lines[Odds1Line+skip*offset].index("(") + 1:lines[Odds1Line+skip*offset].rindex(")")]
-						MLNum2 = lines[Odds2Line+skip*offset][lines[Odds2Line+skip*offset].index("(") + 1:lines[Odds2Line+skip*offset].rindex(")")]
+						moneyLine1 = lines[odds1Line+skip*offset][lines[odds1Line+skip*offset].index("(") + 1:lines[odds1Line+skip*offset].rindex(")")]
+						moneyLine2 = lines[odds2Line+skip*offset][lines[odds2Line+skip*offset].index("(") + 1:lines[odds2Line+skip*offset].rindex(")")]
 					except:
 						#IDK why but sometimes the numbers in brackets arent on the website, not even selinium's fault because I cant see them either
-						MLNum1 = "Error"
-						MLNum2 = "Error"
+						moneyLine1 = "Error"
+						moneyLine2 = "Error"
 						#This makes sure u always get at least one of the ML odds, not sure if I should just put it in another column
-						#MLNum1 = lines[Odds1Line+skip*offset][3:]
-						#MLNum2 = lines[Odds2Line+skip*offset][3:]
+						#moneyLine1 = lines[odds1Line+skip*offset][3:]
+						#moneyLine2 = lines[odds2Line+skip*offset][3:]
 
-					PulledTime = datetime.now()
-
-					c.execute("INSERT INTO NitrogenData VALUES (?,?,?,?,?,?,?,?,datetime('now','localtime'));", (Team1, Team2, BTC1, BTC2, MLNum1, MLNum2, mapNumber,TournamentDate))
+					c.execute("INSERT INTO NitrogenDatabase VALUES (?,?,?,?,?,?,?,?,datetime('now','localtime'));", (team1, team2, btc1, btc2, moneyLine1, moneyLine2, typeOfBet,tournamentDate))
 					conn.commit()
 
 	time.sleep(REFRESH_DELAY)
+
+c.close()
