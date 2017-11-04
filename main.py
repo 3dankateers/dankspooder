@@ -20,16 +20,19 @@ PASSWORD = "0m3g4lul"
 
 conn = sqlite3.connect('data/Betting.sqlite')
 c = conn.cursor()
-c.execute("CREATE TABLE IF NOT EXISTS BetInfo (Team1, Team2, BTC1, BTC2, MLNum1, MLNum2, mapNumber,TournamentDate, datePulled);")
+c.execute("CREATE TABLE IF NOT EXISTS NitrogenData (Team1, Team2, BTC1, BTC2, MLNum1, MLNum2, TypeOfBet,TournamentDate, datePulled);")
 conn.commit()
 
 #Hardcode tournament names for now
 tournamentNames = []
-tournamentNames.append("league-of-legends-world-championship")
 tournamentNames.append("dota-2-dotapit-league")
-tournamentNames.append("csgo-esports-championship-series-eu")
-tournamentNames.append("starcraft-broodwar-afreeca-starleague")
-tournamentNames.append("overwatch-overwatch-world-cup")
+
+
+####Delay in updating bets (in seconds)
+REFRESH_DELAY = 60
+
+#Ghetto mode, set false when you want it to stop
+stillRunning = True
 
 '''
 Team1, Team2 = ""
@@ -79,60 +82,72 @@ password = driver.find_element_by_id("modal-account-login-password-textbox").sen
 time.sleep(2)
 submitLogin = driver.find_element_by_id("modal-account-login-button").click()
 
-for rows in range (len(tournamentNames)):
-	time.sleep(2)
-	driver.get("https://nitrogensports.eu/sport/esports/"+str(tournamentNames[rows]))
-	time.sleep(2)
-	events = driver.find_elements_by_class_name('event')
-	time.sleep(2)
-	for e in range (len(events)):
-		print "Events's e: " + str(e)
-		temp = events[e].text
-		print temp
+while (stillRunning):
 
-		lines = temp.splitlines()
-		for i in range(len(lines)):
-			print "Line: " + str(i) + " " + str(lines[i])
+	for rows in range (len(tournamentNames)):
+		time.sleep(2)
+		driver.get("https://nitrogensports.eu/sport/esports/"+str(tournamentNames[rows]))
+		time.sleep(2)
+		events = driver.find_elements_by_class_name('event')
+		time.sleep(2)
+		for e in range (len(events)):
+			temp = events[e].text
 
+			lines = temp.splitlines()
+			#for i in range(len(lines)):
 
 
-		#WEW LADS
-		#GL reading this bois
-		if(len(lines)>=7):
-			TournamentDate = datetime.strptime(lines[dateLine], '%A, %B %d, %Y %I:%M%p')
 
-			for skip in range(((len(lines)-2)/6)):
-				print "HERE"
-				print ((len(lines)-2)/6)
-				#Temp Variable
-				tempo = lines[team1Line+skip*offset].split('(')
-				Team1 = tempo[0]
+			#WEW LADS
+			#GL reading this bois
+			if(len(lines)>=7):
+				TournamentDate = datetime.strptime(lines[dateLine], '%A, %B %d, %Y %I:%M%p')
 
-				try:
-					mapNumber = lines[team1Line+skip*offset][lines[team1Line+skip*offset].index("(") + 5:lines[team1Line+skip*offset].rindex(")")]
-				except:
-					mapNumber = -1#-1 if its a bet on the match
+				for skip in range(((len(lines)-2)/6)):
+					#Temp Variable
+					tempo = lines[team1Line+skip*offset].split('(')
+					Team1 = tempo[0]
 
-				tempo = lines[team2Line+skip*offset].split('(')
-				Team2 = tempo[0]
-				BTC1 = lines[BTC1Line+skip*offset][:-4]
-				BTC2 = lines[BTC2Line+skip*offset][:-4]
-				#MLNum1 = lines[4][10:-1]
-				#MLNum2 = lines[7][10:-1]
-				
-				try:
-					MLNum1 = lines[Odds1Line+skip*offset][lines[Odds1Line+skip*offset].index("(") + 1:lines[Odds1Line+skip*offset].rindex(")")]
-					MLNum2 = lines[Odds2Line+skip*offset][lines[Odds2Line+skip*offset].index("(") + 1:lines[Odds2Line+skip*offset].rindex(")")]
-				except:
-					#IDK why but sometimes the numbers in brackets arent on the website, not even selinium's fault because I cant see them either
-					MLNum1 = "Error"
-					MLNum2 = "Error"
-					#This makes sure u always get at least one of the ML odds, not sure if I should just put it in another column
-					#MLNum1 = lines[Odds1Line+skip*offset][3:]
-					#MLNum2 = lines[Odds2Line+skip*offset][3:]
+					try:
+						array = lines[team1Line+skip*offset].split(')')
+						#print "Array: " + str(array)
+						answers = ""
 
-				PulledTime = datetime.now()
+						for k in range(len(array)):
+							if '(' in array[k]:
+								kek = array[k].split('(')[1]
+								#print "Kek: " + kek
+								answers += kek
+								answers += ","
 
-				c.execute("INSERT INTO BetInfo VALUES (?,?,?,?,?,?,?,?,datetime('now','localtime'));", (Team1, Team2, BTC1, BTC2, MLNum1, MLNum2, mapNumber,TournamentDate))
-				conn.commit()
+						if (answers == ""):
+							answers = "Match,"
+						mapNumber = answers
 
+					except:
+						mapNumber = -1#-1 if something went wong
+
+					tempo = lines[team2Line+skip*offset].split('(')
+					Team2 = tempo[0]
+					BTC1 = lines[BTC1Line+skip*offset][:-4]
+					BTC2 = lines[BTC2Line+skip*offset][:-4]
+					#MLNum1 = lines[4][10:-1]
+					#MLNum2 = lines[7][10:-1]
+					
+					try:
+						MLNum1 = lines[Odds1Line+skip*offset][lines[Odds1Line+skip*offset].index("(") + 1:lines[Odds1Line+skip*offset].rindex(")")]
+						MLNum2 = lines[Odds2Line+skip*offset][lines[Odds2Line+skip*offset].index("(") + 1:lines[Odds2Line+skip*offset].rindex(")")]
+					except:
+						#IDK why but sometimes the numbers in brackets arent on the website, not even selinium's fault because I cant see them either
+						MLNum1 = "Error"
+						MLNum2 = "Error"
+						#This makes sure u always get at least one of the ML odds, not sure if I should just put it in another column
+						#MLNum1 = lines[Odds1Line+skip*offset][3:]
+						#MLNum2 = lines[Odds2Line+skip*offset][3:]
+
+					PulledTime = datetime.now()
+
+					c.execute("INSERT INTO NitrogenData VALUES (?,?,?,?,?,?,?,?,datetime('now','localtime'));", (Team1, Team2, BTC1, BTC2, MLNum1, MLNum2, mapNumber,TournamentDate))
+					conn.commit()
+
+	time.sleep(REFRESH_DELAY)

@@ -1,0 +1,16 @@
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+
+import time
+
+from datetime import datetime, date
+
+import sqlite3
+
+driver = webdriver.Firefox()
+#doesnt do shit to implicit wait, nice meme
+#driver.implicitly_wait(30)#secs
+driver.get("https://nitrogensports.eu/")
