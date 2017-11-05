@@ -1,135 +1,125 @@
-1509805992054	geckodriver	INFO	geckodriver 0.19.0
-1509805992058	geckodriver	INFO	Listening on 127.0.0.1:53368
-1509805994083	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\DIABLO~1\\AppData\\Local\\Temp\\rust_mozprofile.mKIfjxNGTHqY"
-1509805994209	addons.xpi	WARN	Error parsing extensions state: [Exception... "Component returned failure code: 0x80520012 (NS_ERROR_FILE_NOT_FOUND) [amIAddonManagerStartup.readStartupData]"  nsresult: "0x80520012 (NS_ERROR_FILE_NOT_FOUND)"  location: "JS frame :: resource://gre/modules/addons/XPIProvider.jsm :: loadExtensionState :: line 1554"  data: no] Stack trace: loadExtensionState()@resource://gre/modules/addons/XPIProvider.jsm:1554 < getInstallState()@resource://gre/modules/addons/XPIProvider.jsm:1589 < checkForChanges()@resource://gre/modules/addons/XPIProvider.jsm:3109 < startup()@resource://gre/modules/addons/XPIProvider.jsm:2188 < callProvider()@resource://gre/modules/AddonManager.jsm:269 < _startProvider()@resource://gre/modules/AddonManager.jsm:739 < startup()@resource://gre/modules/AddonManager.jsm:906 < startup()@resource://gre/modules/AddonManager.jsm:3090 < observe()@jar:file:///C:/Program%20Files%20(x86)/Mozilla%20Firefox/omni.ja!/components/addonManager.js:65
-1509805994501	Marionette	INFO	Enabled via --marionette
+1509893282263	geckodriver	INFO	geckodriver 0.19.0
+1509893282268	geckodriver	INFO	Listening on 127.0.0.1:51931
+1509893284293	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\DIABLO~1\\AppData\\Local\\Temp\\rust_mozprofile.Atuz2tnVvzaF"
+1509893284433	addons.xpi	WARN	Error parsing extensions state: [Exception... "Component returned failure code: 0x80520012 (NS_ERROR_FILE_NOT_FOUND) [amIAddonManagerStartup.readStartupData]"  nsresult: "0x80520012 (NS_ERROR_FILE_NOT_FOUND)"  location: "JS frame :: resource://gre/modules/addons/XPIProvider.jsm :: loadExtensionState :: line 1554"  data: no] Stack trace: loadExtensionState()@resource://gre/modules/addons/XPIProvider.jsm:1554 < getInstallState()@resource://gre/modules/addons/XPIProvider.jsm:1589 < checkForChanges()@resource://gre/modules/addons/XPIProvider.jsm:3109 < startup()@resource://gre/modules/addons/XPIProvider.jsm:2188 < callProvider()@resource://gre/modules/AddonManager.jsm:269 < _startProvider()@resource://gre/modules/AddonManager.jsm:739 < startup()@resource://gre/modules/AddonManager.jsm:906 < startup()@resource://gre/modules/AddonManager.jsm:3090 < observe()@jar:file:///C:/Program%20Files%20(x86)/Mozilla%20Firefox/omni.ja!/components/addonManager.js:65
+1509893284728	Marionette	INFO	Enabled via --marionette
 Unable to read VR Path Registry from C:\Users\Diablo117\AppData\Local\openvr\openvrpaths.vrpath
-[Child 24664] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
-[Child 24664] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
-1509805995445	Marionette	INFO	Listening on port 53376
-1509805995593	Marionette	WARN	TLS certificate errors will be ignored for this session
-1509805995618	Marionette	DEBUG	Register listener.js for window 4294967297
-1509805995634	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
-1509805995823	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
-1509805995823	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
-1509805995918	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://nitrogensports.eu/"
-1509805995927	Marionette	DEBUG	Received DOM event "pageshow" for "https://nitrogensports.eu/"
+[Parent 4956] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
 Unable to read VR Path Registry from C:\Users\Diablo117\AppData\Local\openvr\openvrpaths.vrpath
-JavaScript error: https://nitrogensports.eu/assets/scripts/js.min.js?v=20171026152517, line 4: TypeError: a.login_link is null
-JavaScript error: https://nitrogensports.eu/assets/scripts/js.min.js?v=20171026152517, line 2: TypeError: d is undefined
-1509806006263	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
-1509806012546	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
-1509806014553	Marionette	DEBUG	Received DOM event "beforeunload" for "https://nitrogensports.eu/"
-1509806014893	Marionette	DEBUG	Received DOM event "pagehide" for "https://nitrogensports.eu/"
-1509806014893	Marionette	DEBUG	Received DOM event "unload" for "https://nitrogensports.eu/"
-1509806015058	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "4294967302"
-1509806015354	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://nitrogensports.eu/sport/esports/dota-2-dotapit-league"
-1509806015529	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "4294967314"
-1509806015536	Marionette	DEBUG	Received DOM event "pageshow" for "https://nitrogensports.eu/sport/esports/dota-2-dotapit-league"
-1509806081810	Marionette	DEBUG	Received DOM event "beforeunload" for "https://nitrogensports.eu/sport/esports/dota-2-dotapit-league"
-1509806082160	Marionette	DEBUG	Received DOM event "pagehide" for "https://nitrogensports.eu/sport/esports/dota-2-dotapit-league"
-1509806082160	Marionette	DEBUG	Received DOM event "unload" for "https://nitrogensports.eu/sport/esports/dota-2-dotapit-league"
-1509806082328	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "4294967311"
-1509806082638	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://nitrogensports.eu/sport/esports/dota-2-dotapit-league"
-1509806082813	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "4294967323"
-1509806082882	Marionette	DEBUG	Received DOM event "pageshow" for "https://nitrogensports.eu/sport/esports/dota-2-dotapit-league"
-117\AppData\Local\openvr\openvrpaths.vrpath
-[GPU 14848] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 10540] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 10540] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+1509893285773	Marionette	INFO	Listening on port 51939
+1509893285804	Marionette	WARN	TLS certificate errors will be ignored for this session
+1509893285830	Marionette	DEBUG	Register listener.js for window 4294967297
+1509893285848	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1509893285952	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1509893285952	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1509893286741	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://www.lolesports.com/en_US/"
+Unable to read VR Path Registry from C:\Users\Diablo117\AppData\Local\openvr\openvrpaths.vrpath
+JavaScript error: https://cdn.leagueoflegends.com/apollo/widgets/2.1.21/apollo-all.js, line 5: ReferenceError: Dradis is not defined
+1509893290307	Marionette	DEBUG	Received DOM event "pageshow" for "http://www.lolesports.com/en_US/"
+1509893291318	Marionette	DEBUG	Received DOM event "beforeunload" for "http://www.lolesports.com/en_US/"
+1509893291329	Marionette	DEBUG	Received DOM event "pagehide" for "http://www.lolesports.com/en_US/"
+1509893291332	Marionette	DEBUG	Received DOM event "unload" for "http://www.lolesports.com/en_US/"
+1509893291625	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "4294967301"
+1509893291626	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "4294967303"
+1509893291742	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://www.lolesports.com/en_US/"
+JavaScript error: https://cdn.leagueoflegends.com/apollo/widgets/2.1.21/apollo-all.js, line 5: ReferenceError: Dradis is not defined
+1509893293219	Marionette	DEBUG	Received DOM event "pageshow" for "http://www.lolesports.com/en_US/"
+[Parent 4956] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+Unable to read VR Path Registry from C:\Users\Diablo117\AppData\Local\openvr\openvrpaths.vrpath
+[Child 7352] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 7352] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 9976] WARNING: pipe error: 232: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 513
+[Child 9976] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 9976] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+Unable to read VR Path Registry from C:\Users\Diablo117\AppData\Local\openvr\openvrpaths.vrpath
+[GPU 19544] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+
+###!!! [Child][MessageChannel::SendAndWaiJavaScript error: resource://gre/modules/commonjs/toolkit/loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+JavaScript error: resource://gre/modules/commonjs/toolkit/loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+JavaScript error: resource://gre/modules/commonjs/toolkit/loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+JavaScript error: resource://gre/modules/commonjs/toolkit/loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+JavaScript error: resource://gre/modules/commonjs/toolkit/loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+JavaScript error: resource://gre/modules/commonjs/toolkit/loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+JavaScript error: resource://gre/modules/commonjs/toolkit/loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+JavaScript error: resource://gre/modules/commonjs/toolkit/loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+JavaScript error: http://s.lolstatic.com/ping/ping-0.1.236.min.js, line 7: TypeError: g is null
+1509893472941	Marionette	DEBUG	Register listener.js for window 12884901889
+1509893552420	Marionette	DEBUG	Register listener.js for window 4294967340
+JavaScript error: https://cdn.leagueoflegends.com/apollo/widgets/2.1.21/apollo-all.js, line 5: ReferenceError: Dradis is not defined
+JavaScript error: https://cdn.leagueoflegends.com/apollo/widgets/2.1.21/apollo-all.js, line 5: ReferenceError: Dradis is not defined
+1509893812647	Marionette	DEBUG	Register listener.js for window 8589934601
+1509893813110	Marionette	DEBUG	Register listener.js for window 10737418250
+JavaScript error: https://cdn.leagueoflegends.com/apollo/widgets/2.1.21/apollo-all.js, line 5: ReferenceError: Dradis is not defined
+JavaScript error: https://cdn.leagueoflegends.com/apollo/widgets/2.1.21/apollo-all.js, line 5: ReferenceError: Dradis is not defined
+1509893813998	Marionette	DEBUG	Register listener.js for window 12884901892
+Unable to read VR Path Registry from C:\Users\Diablo117\AppData\Local\openvr\openvrpaths.vrpath
+JavaScript error: https://cdn.leagueoflegends.com/apollo/widgets/2.1.21/apollo-all.js, line 5: ReferenceError: Dradis is not defined
+1509893817926	Marionette	DEBUG	Register listener.js for window 4294967369
+JavaScript error: https://cdn.leagueoflegends.com/apollo/widgets/2.1.21/apollo-all.js, line 5: ReferenceError: Dradis is not defined
+JavaScript error: http://www.lolesports.com/en_US/lck/lck_2017_summer/schedule/promotion_relegation/Spring%20Promotion#, line 1: NS_ERROR_NOT_INITIALIZED: 
+/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+JavaScript error: resource://gre/modules/commonjs/toolkit/loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+JavaScript error: resource://gre/modules/commonjs/toolkit/loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+JavaScript error: resource://gre/modules/commonjs/toolkit/loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+JavaScript error: resource://gre/modules/commonjs/toolkit/loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+JavaScript error: resource://gre/modules/commonjs/toolkit/loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+JavaScript error: resource://gre/modules/commonjs/toolkit/loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+JavaScript error: resource://gre/modules/commonjs/toolkit/loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+JavaScript error: resource://gre/modules/commonjs/toolkit/loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+JavaScript error: resource://gre/modules/commonjs/toolkit/loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+JavaScript error: resource://gre/modules/commonjs/toolkit/loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+JavaScript error: resource://gre/modules/commonjs/toolkit/loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+JavaScript error: resource://gre/modules/commonjs/toolkit/loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+Unable to read VR Path Registry from C:\Users\Diablo117\AppData\Local\openvr\openvrpaths.vrpath
+JavaScript error: https://cdn.leagueoflegends.com/apollo/widgets/2.1.21/apollo-all.js, line 5: ReferenceError: Dradis is not defined
+JavaScript error: http://s.lolstatic.com/ping/ping-0.1.236.min.js, line 7: TypeError: g is null
+JavaScript error: http://s.lolstatic.com/ping/ping-0.1.236.min.js, line 7: TypeError: g is null
+Unable to read VR Path Registry from C:\Users\Diablo117\AppData\Local\openvr\openvrpaths.vrpath
+[Parent 16920] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+Unable to read VR Path Registry from C:\Users\Diablo117\AppData\Local\openvr\openvrpaths.vrpath
+[Child 26288] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 26288] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+JavaScript error: resource://gre/modules/commonjs/toolkit/loader.js -> resource://devtools/server/actors/highlighters/box-model.js, line 410: TypeError: quads is undefined
+JavaScript error: resource://gre/modules/commonjs/toolkit/loader.js -> resource://devtools/server/actors/tab.js, line 1641: TypeError: can't access dead object
+JavaScript error: resource://gre/modules/commonjs/toolkit/loader.js -> resource://devtools/server/actors/tab.js, line 1641: TypeError: can't access dead object
+JavaScript error: resource://gre/modules/commonjs/toolkit/loader.js -> resource://devtools/server/actors/tab.js, line 1641: TypeError: can't access dead object
+JavaScript error: resource://gre/modules/commonjs/toolkit/loader.js -> resource://devtools/server/actors/tab.js, line 1641: TypeError: can't access dead object
+JavaScript error: resource://gre/modules/commonjs/toolkit/loader.js -> resource://devtools/server/actors/tab.js, line 1641: TypeError: can't access dead object
+JavaScript error: resource://gre/modules/commonjs/toolkit/loader.js -> resource://devtools/server/actors/tab.js, line 1641: TypeError: can't access dead object
+JavaScript error: resource://gre/modules/commonjs/toolkit/loader.js -> resource://devtools/server/actors/tab.js, line 1641: TypeError: can't access dead object
+JavaScript error: resource://gre/modules/commonjs/toolkit/loader.js -> resource://devtools/server/actors/tab.js, line 1641: TypeError: can't access dead object
+JavaScript error: resource://gre/modules/commonjs/toolkit/loader.js -> resource://devtools/server/actors/tab.js, line 1641: TypeError: can't access dead object
+JavaScript error: resource://gre/modules/commonjs/toolkit/loader.js -> resource://devtools/server/actors/tab.js, line 1641: TypeError: can't access dead object
+JavaScript error: resource://gre/modules/commonjs/toolkit/loader.js -> resource://devtools/server/actors/highlighters/box-model.js, line 410: TypeError: quads is undefined
+JavaScript error: resource://gre/modules/commonjs/toolkit/loader.js -> resource://devtools/server/actors/tab.js, line 1641: TypeError: can't access dead object
+JavaScript error: resource://gre/modules/commonjs/toolkit/loader.js -> resource://devtools/server/actors/tab.js, line 1641: TypeError: can't access dead object
+JavaScript error: resource://gre/modules/commonjs/toolkit/loader.js -> resource://devtools/server/actors/tab.js, line 1641: TypeError: can't access dead object
+JavaScript error: resource://gre/modules/commonjs/toolkit/loader.js -> resource://devtools/server/actors/tab.js, line 1641: TypeError: can't access dead object
+Unable to read VR Path Registry from C:\Users\Diablo117\AppData\Local\openvr\openvrpaths.vrpath
+JavaScript error: https://cdn.leagueoflegends.com/apollo/widgets/2.1.21/apollo-all.js, line 5: ReferenceError: Dradis is not defined
+JavaScript error: https://cdn.leagueoflegends.com/apollo/widgets/2.1.21/apollo-all.js, line 5: ReferenceError: Dradis is not defined
+Unable to read VR Path Registry from C:\Users\Diablo117\AppData\Local\openvr\openvrpaths.vrpath
+JavaScript error: https://cdn.leagueoflegends.com/apollo/widgets/2.1.21/apollo-all.js, line 5: ReferenceError: Dradis is not defined
+[Parent 16920] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Parent 16920] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 23020] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 23020] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 6776] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 6776] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+Unable to read VR Path Registry from C:\Users\Diablo117\AppData\Local\openvr\openvrpaths.vrpath
+[Child 1200] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 1200] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Parent 16920] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 16224] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 16224] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Parent 16920] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
 
 ###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
 
-ceived DOM event "beforeunload" for "https://nitrogensports.eu/sport/esports/dota-2-dotapit-league"
-1509791638462	Marionette	DEBUG	Received DOM event "pagehide" for "https://nitrogensports.eu/sport/esports/dota-2-dotapit-league"
-1509791638462	Marionette	DEBUG	Received DOM event "unload" for "https://nitrogensports.eu/sport/esports/dota-2-dotapit-league"
-1509791638639	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "4294967320"
-1509791638926	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://nitrogensports.eu/sport/esports/dota-2-dotapit-league"
-1509791639104	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "4294967332"
-1509791639178	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "4294967335"
-1509791639537	Marionette	DEBUG	Received DOM event "pageshow" for "https://nitrogensports.eu/sport/esports/dota-2-dotapit-league"
-1509791706706	Marionette	DEBUG	Received DOM event "beforeunload" for "https://nitrogensports.eu/sport/esports/dota-2-dotapit-league"
-1509791707042	Marionette	DEBUG	Received DOM event "pagehide" for "https://nitrogensports.eu/sport/esports/dota-2-dotapit-league"
-1509791707042	Marionette	DEBUG	Received DOM event "unload" for "https://nitrogensports.eu/sport/esports/dota-2-dotapit-league"
-1509791707216	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "4294967329"
-1509791707532	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://nitrogensports.eu/sport/esports/dota-2-dotapit-league"
-1509791707688	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "4294967341"
-1509791707802	Marionette	DEBUG	Received DOM event "pageshow" for "https://nitrogensports.eu/sport/esports/dota-2-dotapit-league"
-1509791775052	Marionette	DEBUG	Received DOM event "beforeunload" for "https://nitrogensports.eu/sport/esports/dota-2-dotapit-league"
-1509791775395	Marionette	DEBUG	Received DOM event "pagehide" for "https://nitrogensports.eu/sport/esports/dota-2-dotapit-league"
-1509791775396	Marionette	DEBUG	Received DOM event "unload" for "https://nitrogensports.eu/sport/esports/dota-2-dotapit-league"
-1509791775570	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "4294967338"
-1509791775896	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://nitrogensports.eu/sport/esports/dota-2-dotapit-league"
-1509791776184	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "4294967350"
-1509791776202	Marionette	DEBUG	Received DOM event "pageshow" for "https://nitrogensports.eu/sport/esports/dota-2-dotapit-league"
-1509791843591	Marionette	DEBUG	Received DOM event "beforeunload" for "https://nitrogensports.eu/sport/esports/dota-2-dotapit-league"
-1509791843921	Marionette	DEBUG	Received DOM event "pagehide" for "https://nitrogensports.eu/sport/esports/dota-2-dotapit-league"
-1509791843921	Marionette	DEBUG	Received DOM event "unload" for "https://nitrogensports.eu/sport/esports/dota-2-dotapit-league"
-1509791844118	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "4294967347"
-1509791844570	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://nitrogensports.eu/sport/esports/dota-2-dotapit-league"
-1509791844729	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "4294967359"
-1509791844884	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "4294967362"
-1509791845138	Marionette	DEBUG	Received DOM event "pageshow" for "https://nitrogensports.eu/sport/esports/dota-2-dotapit-league"
-1509791912421	Marionette	DEBUG	Received DOM event "beforeunload" for "https://nitrogensports.eu/sport/esports/dota-2-dotapit-league"
-1509791912763	Marionette	DEBUG	Received DOM event "pagehide" for "https://nitrogensports.eu/sport/esports/dota-2-dotapit-league"
-1509791912763	Marionette	DEBUG	Received DOM event "unload" for "https://nitrogensports.eu/sport/esports/dota-2-dotapit-league"
-1509791912944	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "4294967356"
-1509791913265	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://nitrogensports.eu/sport/esports/dota-2-dotapit-league"
-1509791913454	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "4294967368"
-1509791913493	Marionette	DEBUG	Received DOM event "pageshow" for "https://nitrogensports.eu/sport/esports/dota-2-dotapit-league"
-1509791980662	Marionette	DEBUG	Received DOM event "beforeunload" for "https://nitrogensports.eu/sport/esports/dota-2-dotapit-league"
-1509791980999	Marionette	DEBUG	Received DOM event "pagehide" for "https://nitrogensports.eu/sport/esports/dota-2-dotapit-league"
-1509791980999	Marionette	DEBUG	Received DOM event "unload" for "https://nitrogensports.eu/sport/esports/dota-2-dotapit-league"
-1509791981186	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "4294967365"
-1509791981538	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://nitrogensports.eu/sport/esports/dota-2-dotapit-league"
-1509791981735	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "4294967377"
-1509791981747	Marionette	DEBUG	Received DOM event "pageshow" for "https://nitrogensports.eu/sport/esports/dota-2-dotapit-league"
-1509792048992	Marionette	DEBUG	Received DOM event "beforeunload" for "https://nitrogensports.eu/sport/esports/dota-2-dotapit-league"
-1509792049337	Marionette	DEBUG	Received DOM event "pagehide" for "https://nitrogensports.eu/sport/esports/dota-2-dotapit-league"
-1509792049338	Marionette	DEBUG	Received DOM event "unload" for "https://nitrogensports.eu/sport/esports/dota-2-dotapit-league"
-1509792049527	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "4294967374"
-1509792049813	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://nitrogensports.eu/sport/esports/dota-2-dotapit-league"
-1509792049957	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "4294967386"
-1509792050091	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "4294967389"
-1509792050374	Marionette	DEBUG	Received DOM event "pageshow" for "https://nitrogensports.eu/sport/esports/dota-2-dotapit-league"
-1509792117581	Marionette	DEBUG	Received DOM event "beforeunload" for "https://nitrogensports.eu/sport/esports/dota-2-dotapit-league"
-1509792118346	Marionette	DEBUG	Received DOM event "pagehide" for "https://nitrogensports.eu/sport/esports/dota-2-dotapit-league"
-1509792118346	Marionette	DEBUG	Received DOM event "unload" for "https://nitrogensports.eu/sport/esports/dota-2-dotapit-league"
-1509792118520	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "4294967383"
-1509792118858	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://nitrogensports.eu/sport/esports/dota-2-dotapit-league"
-1509792119050	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "4294967395"
-1509792119106	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "4294967398"
-1509792119121	Marionette	DEBUG	Received DOM event "pageshow" for "https://nitrogensports.eu/sport/esports/dota-2-dotapit-league"
-1509792186366	Marionette	DEBUG	Received DOM event "beforeunload" for "https://nitrogensports.eu/sport/esports/dota-2-dotapit-league"
-1509792187125	Marionette	DEBUG	Received DOM event "pagehide" for "https://nitrogensports.eu/sport/esports/dota-2-dotapit-league"
-1509792187125	Marionette	DEBUG	Received DOM event "unload" for "https://nitrogensports.eu/sport/esports/dota-2-dotapit-league"
-1509792187297	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "4294967392"
-1509792187643	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://nitrogensports.eu/sport/esports/dota-2-dotapit-league"
-1509792187789	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "4294967404"
-1509792187845	Marionette	DEBUG	Received DOM event "pageshow" for "https://nitrogensports.eu/sport/esports/dota-2-dotapit-league"
-1509792255031	Marionette	DEBUG	Received DOM event "beforeunload" for "https://nitrogensports.eu/sport/esports/dota-2-dotapit-league"
-1509792255800	Marionette	DEBUG	Received DOM event "pagehide" for "https://nitrogensports.eu/sport/esports/dota-2-dotapit-league"
-1509792255800	Marionette	DEBUG	Received DOM event "unload" for "https://nitrogensports.eu/sport/esports/dota-2-dotapit-league"
-1509792255985	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "4294967401"
-1509792256316	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://nitrogensports.eu/sport/esports/dota-2-dotapit-league"
-1509792256513	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "4294967413"
-1509792256551	Marionette	DEBUG	Received DOM event "pageshow" for "https://nitrogensports.eu/sport/esports/dota-2-dotapit-league"
-1509792323736	Marionette	DEBUG	Received DOM event "beforeunload" for "https://nitrogensports.eu/sport/esports/dota-2-dotapit-league"
-1509792324066	Marionette	DEBUG	Received DOM event "pagehide" for "https://nitrogensports.eu/sport/esports/dota-2-dotapit-league"
-1509792324066	Marionette	DEBUG	Received DOM event "unload" for "https://nitrogensports.eu/sport/esports/dota-2-dotapit-league"
-1509792324242	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "4294967410"
-1509792324559	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://nitrogensports.eu/sport/esports/dota-2-dotapit-league"
-1509792324706	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "4294967422"
-1509792324818	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "4294967425"
-1509792325172	Marionette	DEBUG	Received DOM event "pageshow" for "https://nitrogensports.eu/sport/esports/dota-2-dotapit-league"
-1509792392355	Marionette	DEBUG	Received DOM event "beforeunload" for "https://nitrogensports.eu/sport/esports/dota-2-dotapit-league"
-1509792393143	Marionette	DEBUG	Received DOM event "pagehide" for "https://nitrogensports.eu/sport/esports/dota-2-dotapit-league"
-1509792393143	Marionette	DEBUG	Received DOM event "unload" for "https://nitrogensports.eu/sport/esports/dota-2-dotapit-league"
-1509792393328	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "4294967419"
-1509792393638	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://nitrogensports.eu/sport/esports/dota-2-dotapit-league"
-1509792393837	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "4294967431"
-1509792393933	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "4294967434"
-1509792394204	Marionette	DEBUG	Received DOM event "pageshow" for "https://nitrogensports.eu/sport/esports/dota-2-dotapit-league"
-1509792461458	Marionette	DEBUG	Received DOM event "beforeunload" for "https://nitrogensports.eu/sport/esports/dota-2-dotapit-league"
-1509792462234	Marionette	DEBUG	Received DOM event "pagehide" for "https://nitrogensports.eu/sport/esports/dota-2-dotapit-league"
+rionette	DEBUG	Received DOM event "pagehide" for "https://nitrogensports.eu/sport/esports/dota-2-dotapit-league"
 1509792462235	Marionette	DEBUG	Received DOM event "unload" for "https://nitrogensports.eu/sport/esports/dota-2-dotapit-league"
 1509792462415	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "4294967428"
 1509792462737	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://nitrogensports.eu/sport/esports/dota-2-dotapit-league"
