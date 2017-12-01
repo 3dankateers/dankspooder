@@ -5,6 +5,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 import time
+import psycopg2
 
 from datetime import datetime, date
 
@@ -18,18 +19,19 @@ driver.get("https://nitrogensports.eu/")
 USERNAME = "3Dankateers"
 PASSWORD = "0m3g4lul"
 
-conn = sqlite3.connect('data/Betting.sqlite')
+conn = psycopg2.connect("dbname='league' user='postgres' host='localhost' password='Postgres1423'")
 c = conn.cursor()
-c.execute("CREATE TABLE IF NOT EXISTS NitrogenDatabase (team1, team2, btc1, btc2, moneyLine1, moneyLine2, typeOfBet,tournamentDate, datePulled);")
+c.execute("CREATE TABLE IF NOT EXISTS Betting (team1 TEXT, team2 TEXT, btc1 REAL, btc REAL, moneyLine1 REAL, moneyLine2 REAL, typeOfBet TEXT,tournamentDate TIMESTAMP, datePulled TIMESTAMP);")
 conn.commit()
 
 #Hardcode tournament names for now
 tournamentNames = []
-tournamentNames.append("dota-2-dotapit-league")
-
+tournamentNames.append("league-of-legends-all-star-tournament")
+tournamentNames.append("league-of-legends-kespa-cup")
+tournamentNames.append("league-of-legends-superliga-abcde")
 
 ####Delay in updating bets (in seconds)
-REFRESH_DELAY = 60
+REFRESH_DELAY = 600
 
 #Ghetto mode, set false when you want it to stop
 stillRunning = True
@@ -83,7 +85,7 @@ time.sleep(2)
 submitLogin = driver.find_element_by_id("modal-account-login-button").click()
 
 while (stillRunning):
-
+	time.sleep(REFRESH_DELAY)
 	for rows in range (len(tournamentNames)):
 		time.sleep(2)
 		driver.get("https://nitrogensports.eu/sport/esports/"+str(tournamentNames[rows]))
@@ -139,15 +141,14 @@ while (stillRunning):
 						moneyLine2 = lines[odds2Line+skip*offset][lines[odds2Line+skip*offset].index("(") + 1:lines[odds2Line+skip*offset].rindex(")")]
 					except:
 						#IDK why but sometimes the numbers in brackets arent on the website, not even selinium's fault because I cant see them either
+						continue
 						moneyLine1 = "Error"
 						moneyLine2 = "Error"
 						#This makes sure u always get at least one of the ML odds, not sure if I should just put it in another column
 						#moneyLine1 = lines[odds1Line+skip*offset][3:]
 						#moneyLine2 = lines[odds2Line+skip*offset][3:]
 
-					c.execute("INSERT INTO NitrogenDatabase VALUES (?,?,?,?,?,?,?,?,datetime('now','localtime'));", (team1, team2, btc1, btc2, moneyLine1, moneyLine2, typeOfBet,tournamentDate))
+					c.execute("INSERT INTO Betting VALUES (%s,%s,%s,%s,%s,%s,%s,%s,now());", (team1, team2, btc1, btc2, moneyLine1, moneyLine2, typeOfBet,tournamentDate,))
 					conn.commit()
-
-	time.sleep(REFRESH_DELAY)
 
 c.close()
