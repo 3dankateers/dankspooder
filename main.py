@@ -1,7 +1,9 @@
 from selenium import webdriver
+from selenium.webdriver import Chrome
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
-from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 import time
@@ -9,9 +11,10 @@ import psycopg2
 
 from datetime import datetime, date
 
-import sqlite3
+options = Options()
+options.add_argument('--headless')
+driver = webdriver.Chrome(executable_path='chromedriver', chrome_options=options)
 
-driver = webdriver.Firefox()
 #doesnt do shit to implicit wait, nice meme
 #driver.implicitly_wait(30)#secs
 driver.get("https://nitrogensports.eu/")
@@ -26,9 +29,18 @@ conn.commit()
 
 #Hardcode tournament names for now
 tournamentNames = []
-tournamentNames.append("league-of-legends-all-star-tournament")
-tournamentNames.append("league-of-legends-kespa-cup")
-tournamentNames.append("league-of-legends-superliga-abcde")
+tournamentNames.append("league-of-legends-champions-korea")
+tournamentNames.append("league-of-legends-china-lpl")
+tournamentNames.append("league-of-legends-elite-challenger-series")
+tournamentNames.append("league-of-legends-garuda-series")
+tournamentNames.append("league-of-legends-latin-america-north-cup")
+tournamentNames.append("league-of-legends-lcs-europe")
+tournamentNames.append("league-of-legends-lcs-north-america")
+tournamentNames.append("league-of-legends-lol-master-series")
+tournamentNames.append("league-of-legends-oceanic-pro-league")
+tournamentNames.append("league-of-legends-thailand-pro-league")
+tournamentNames.append("league-of-legends-turkish-champions-league")
+
 
 ####Delay in updating bets (in seconds)
 REFRESH_DELAY = 600
