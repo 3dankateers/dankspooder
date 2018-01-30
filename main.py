@@ -11,9 +11,14 @@ import psycopg2
 
 from datetime import datetime, date
 
+
+
 options = Options()
-options.add_argument('--headless')
-driver = webdriver.Chrome(executable_path='chromedriver', chrome_options=options)
+#options.add_argument('--headless')
+#driver = webdriver.Chrome(executable_path='chromedriver', chrome_options=options)
+
+options.add_argument('-headless')
+driver = Firefox(executable_path='geckodriver', firefox_options=options)
 
 #doesnt do shit to implicit wait, nice meme
 #driver.implicitly_wait(30)#secs
